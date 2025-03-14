@@ -18,6 +18,7 @@ Opções:
 -c : Limpar as senhas do arquivo passwords.txt
 -h : Exibir esse menu
 
+<<<<<<< HEAD
 O comportamento padrão do script é gerar uma senha de 8 caracteres minúsculos."
 
 elif [ "$1" = "-p" ]; then
@@ -32,6 +33,9 @@ if [ -e password.txt ]; then
 else
 	touch password.txt
 	echo "$senha" >> password.txt
+=======
+O comportamento padrão do script é gerar uma senha de 10 caracteres."
+>>>>>>> 5d6741a8bb1ae8e4779e91b9d84842d481d65bc9
 fi
 
 
