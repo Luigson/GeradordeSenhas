@@ -26,7 +26,10 @@ elif [ "$1" = "-c" ]; then
 
 else
         # Essa linha gera uma senha quando o script é executado
-        senha=$(cat /dev/urandom | tr -dc "$CARACTERES" | fold -w 10 | head -n 1)
+       	senha=$(cat /dev/urandom | tr -dc "$CARACTERES" | fold -w 10 | head -n 1)
+
+	# Imprime a senha gerada
+	echo "Senha gerada: $senha"
 
 fi
 
@@ -37,7 +40,3 @@ else
 	touch password.txt
 	echo "$senha" >> password.txt
 fi
-
-# Imprime a senha gerada
-echo "Senha gerada: $senha"
-
