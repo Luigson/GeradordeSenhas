@@ -19,7 +19,22 @@ Opções:
 -h : Exibir esse menu
 
 O comportamento padrão do script é gerar uma senha de 8 caracteres minúsculos."
+
+elif [ "$1" = "-p" ]; then
+	echo "Senhas Geradas:"
+	cat password.txt
+
 fi
+
+#Script de Salvar a senha em um .txt
+if [ -e password.txt ]; then
+	echo "$senha" >> password.txt
+else
+	touch password.txt
+	echo "$senha" >> password.txt
+fi
+
+
 
 # Imprime a senha gerada
 # Adicione aqui também a implementação do código que salva a senha no passwords.txt e cria o arquivo caso ele não exista
