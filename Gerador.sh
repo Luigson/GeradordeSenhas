@@ -18,7 +18,7 @@ Opções:
 -c : Limpar as senhas do arquivo passwords.txt
 -h : Exibir esse menu
 
-O comportamento padrão do script é gerar uma senha de 8 caracteres minúsculos."
+O comportamento padrão do script é gerar uma senha de 10 caracteres."
 fi
 
 # Imprime a senha gerada
