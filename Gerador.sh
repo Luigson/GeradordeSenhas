@@ -19,6 +19,9 @@ Opções:
 -h : Exibir esse menu
 
 O comportamento padrão do script é gerar uma senha de 10 caracteres."
+
+elif [ "$1" = "-c" ]; then
+	> password.txt
 fi
 
 # Imprime a senha gerada
