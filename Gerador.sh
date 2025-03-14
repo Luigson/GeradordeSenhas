@@ -16,6 +16,10 @@ Opções:
 
 O comportamento padrão do script é gerar uma senha de 10 caracteres."
 
+elif [ "$1" = "-p" ]; then
+	echo "Senhas Geradas:"
+	cat password.txt
+  
 elif [ "$1" = "-c" ]; then
 	# Essa linha limpa o arquivo password.txt
 	> password.txt
@@ -26,5 +30,19 @@ else
 
 fi
 
+#Script de Salvar a senha em um .txt
+if [ -e password.txt ]; then
+	echo "$senha" >> password.txt
+else
+	touch password.txt
+	echo "$senha" >> password.txt
+fi
+
+
+
+
+# Imprime a senha gerada
+# Adicione aqui também a implementação do código que salva a senha no passwords.txt e cria o arquivo caso ele não exista
+# Dica: lembre-se de utilizar o operador "-e" junto com a condicional "if"!
 echo "Senha gerada: $senha"
 
